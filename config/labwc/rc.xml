@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<labwc_config>
+    <theme name="Arc-Darkest" cornerRadius="0">
+        <font name="DejaVuSansMono" size="10" />
+    </theme>
+    <desktops number="2" />
+    <keyboard>
+        <keybind key="C-A-t">
+            <action name="Execute" command="foot" />
+        </keybind>
+
+        <keybind key="A-Tab">
+            <action name="NextWindow" />
+        </keybind>
+        <keybind key="S-A-Left">
+            <action name="SendToDesktop" to="left" />
+        </keybind>
+        <keybind key="S-A-Right">
+            <action name="SendToDesktop" to="right" />
+        </keybind>
+        <keybind key="C-A-Left">
+            <action name="GoToDesktop" to="left" />
+        </keybind>
+        <keybind key="C-A-Right">
+            <action name="GoToDesktop" to="right" />
+        </keybind>
+        <keybind key="W-F4">
+            <action name="None" />
+        </keybind>
+
+        <keybind key="W-Space">
+            <action name="Execute" command="~/.config/mako/kbd-layout.sh toggle" />
+        </keybind>
+        <keybind key="XF86_AudioRaiseVolume">
+            <action name="Execute" command="~/.config/mako/aud-volume.sh +" />
+        </keybind>
+        <keybind key="XF86_AudioLowerVolume">
+            <action name="Execute" command="~/.config/mako/aud-volume.sh -" />
+        </keybind>
+        <keybind key="XF86_AudioMute">
+            <action name="Execute" command="~/.config/mako/aud-volume.sh mute" />
+        </keybind>
+        <keybind key="XF86_MonBrightnessUp">
+            <action name="Execute" command="~/.config/mako/disp-bright.sh +" />
+        </keybind>
+        <keybind key="XF86_MonBrightnessDown">
+            <action name="Execute" command="~/.config/mako/disp-bright.sh -" />
+        </keybind>
+        <keybind key="XF86_KbdBrightnessUp">
+            <action name="Execute" command="~/.config/mako/kbd-bright.sh +" />
+        </keybind>
+        <keybind key="XF86_KbdBrightnessDown">
+            <action name="Execute" command="~/.config/mako/kbd-bright.sh -" />
+        </keybind>
+    </keyboard>
+
+    <mouse>
+        <context name="Root">
+            <mousebind button="Right" action="Press">
+                <action name="ShowMenu" menu="root-menu"/>
+            </mousebind>
+        </context>
+        <context name="WindowMenu">
+            <mousebind button="Left" action="Click">
+                <action name="ShowMenu" menu="client-menu" />
+            </mousebind>
+        </context>
+
+        <context name="Title">
+            <mousebind button="Left" action="Drag">
+                <action name="Move" />
+            </mousebind>
+        </context>
+
+        <context name="Iconify">
+            <mousebind button="Left" action="Click">
+                <action name="Iconify" />
+            </mousebind>
+        </context>
+        <context name="Maximize">
+            <mousebind button="Left" action="Click">
+                <action name="ToggleMaximize" />
+            </mousebind>
+        </context>
+        <context name="Close">
+            <mousebind button="Left" action="Click">
+                <action name="Close" />
+            </mousebind>
+        </context>
+
+        <context name="Top">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="Left">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="Right">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="Bottom">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="TRCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="BRCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="TLCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+        <context name="BLCorner">
+            <mousebind button="Left" action="Drag">
+                <action name="Resize" />
+            </mousebind>
+        </context>
+
+        <context name="Client">
+            <mousebind button="Left" action="Press">
+                <action name="Focus" />
+                <action name="Raise" />
+            </mousebind>
+            <mousebind button="Right" action="Press">
+                <action name="Focus" />
+                <action name="Raise" />
+            </mousebind>
+        </context>
+    </mouse>
+</labwc_config>

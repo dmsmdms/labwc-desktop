@@ -1,0 +1,8 @@
+# remove existing files from previous run
+rm -rf $XDG_RUNTIME_DIR/labwc
+mkdir $XDG_RUNTIME_DIR/labwc
+
+# startup applications
+swaybg -i ~/.local/share/wallpapers/mountain_dark_1920x1080.png &
+waybar &
+mako &

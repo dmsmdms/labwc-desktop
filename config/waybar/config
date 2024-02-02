@@ -1,0 +1,122 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 48,
+    "modules-left": [
+        "custom/menu",
+        "wlr/taskbar"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "custom/language",
+        "clock",
+        "network#wired",
+        "network#wireless",
+        "bluetooth",
+        "custom/audio",
+        "battery",
+        "custom/power-off"
+    ],
+    "custom/menu": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wofi -I -k /dev/null -c ~/.config/wofi/menu.conf -s ~/.config/wofi/menu.css"
+    },
+    "wlr/taskbar": {
+        "icon-size": 36,
+        "on-click": "minimize-raise"
+    },
+    "cpu": {
+        "interval": 1,
+        "states": {
+            "middle": 60,
+            "high": 90
+        },
+        "format": "{usage}% "
+    },
+    "custom/language": {
+        "signal": 1,
+        "interval": "once",
+        "exec": "~/.config/mako/kbd-layout.sh",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 1,
+        "states": {
+            "middle": 60,
+            "high": 90
+        },
+        "format": "{used}GB ",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%H:%M} ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode" : "month",
+            "mode-mon-col" : 3,
+            "on-scroll" : 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#a2734c'><b>{}</b></span>",
+                "weekdays": "<span color='#2aa1b3'><b>{}</b></span>",
+                "days": "<span color='#fafafa'><b>{}</b></span>",
+                "today": "<span color='#26a269'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
+    },
+    "network#wired": {
+        "interface": "eno2",
+        "format": "",
+        "format-ethernet": "",
+        "tooltip-format-ethernet": "Wired connection\n\nIP: {ipaddr}"
+    },
+    "network#wireless": {
+        "interface": "wlo1",
+        "format": "",
+        "tooltip-format": "disconnected",
+        "tooltip-format-wifi": "Wireless connection\n\nSSID: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    },
+    "bluetooth": {
+        "format": "",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} {device_address} {device_battery_percentage}%"
+    },
+    "custom/audio": {
+        "signal": 2,
+        "return-type": "json",
+        "interval": "once",
+        "exec": "~/.config/mako/aud-volume.sh",
+        "tooltip": false,
+    },
+    "battery": {
+        "interval": 1,
+        "states": {
+            "critical": 10,
+            "warning": 25
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false
+    },
+    "custom/power-off": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/wofi/power.sh"
+    }
+}
+

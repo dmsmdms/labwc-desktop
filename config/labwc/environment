@@ -1,0 +1,12 @@
+# set API for window rendering
+WLR_RENDERER=vulkan
+
+# set GTK theme
+GTK_THEME=Arc-Darkest
+
+# set cursor theme
+XCURSOR_THEME=breeze_cursors
+
+# set keyboard layout (don't forget to edit kbd-layout.sh)
+XKB_DEFAULT_LAYOUT=us,ru
+XKB_DEFAULT_OPTIONS=grp:win_space_toggle

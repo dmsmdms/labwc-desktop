@@ -1,0 +1,59 @@
+window#waybar {
+    font-family: FontAwesome, DejaVuSansMono;
+    background: #242424;
+}
+
+#taskbar button {
+    margin: 0px 6px;
+    border: 0px;
+    border-bottom: 2px solid #f6f5f4;
+    border-radius: 0px;
+}
+
+#taskbar button:hover {
+    background: #323232;
+}
+
+#taskbar button.active {
+    background: #3b3b3b;
+}
+
+#taskbar button.active:hover {
+    background: #424242;
+}
+
+#custom-menu, #battery, #bluetooth, #clock, #network.wired, #network.wireless,
+#cpu, #memory, #custom-language, #custom-audio, #custom-power-off {
+    margin: 8px 4px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background: #3b3b3b;
+}
+
+#custom-menu {
+    margin: 8px 12px 8px 8px;
+}
+
+#custom-power-off {
+    margin-right: 8px;
+}
+
+#network.disconnected.wireless, #bluetooth.disabled, #custom-audio.disabled {
+    color: #303030;
+}
+
+#network.ethernet.wired, #network.wifi.wireless, #bluetooth.connected {
+    color: #2aa1b3;
+}
+
+#cpu.middle, #memory.middle, #battery.warning {
+    color: #ff7b63;
+}
+
+#cpu.high, #memory.high, #battery.critical, #custom-power-off {
+    color: #e01b24;
+}
+
+#battery.charging, #battery.plugged {
+    color: #26a269;
+}

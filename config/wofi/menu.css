@@ -1,0 +1,29 @@
+window {
+    font-family: FontAwesome, DejaVuSansMono;
+    background: #242424;
+    border: 1px solid #2d3036;
+}
+
+#input {
+    margin: 20px 80px;
+    background: #323232;
+    border: 1px solid #2d3036;
+    border-radius: 4px;
+}
+
+#scroll {
+    margin: 0px 20px 20px 20px;
+}
+
+#entry {
+    margin: 0px 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #c5c8c6;
+}
+
+#entry:selected {
+    background-color: #3b3b3b;
+}
